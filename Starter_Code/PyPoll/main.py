@@ -13,9 +13,6 @@ candidate_votes = {}
 winner_count = 0
 winner = ""
 
-
-
-
 # Open the File
 with open(csvpath) as csv_file:
     csv_reader = csv.DictReader(csv_file)
@@ -44,9 +41,9 @@ with open(output_file, 'w') as txt_file:
         f"---------------\n")
     txt_file.write(election_header)
     #write the total number of votes
-    txt_file.write("Total Votes : %d\n" % total_votes)   
+    txt_file.write(f'Total Votes : {total_votes} \n')   
     txt_file.write("\n---------------------\n")
-    print(total_votes)
+    print(f'Total Votes: {total_votes} \n')
     
     #find the percentage of votes and make it 3 decimal points.
     for candidate in candidate_votes:

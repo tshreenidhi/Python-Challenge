@@ -8,20 +8,14 @@ budget_data_csv = os.path.join("Resources", "budget_data.csv")
 #set the output of the text file
 Output_path = "Shreenidhioutput.txt"
 
-#Sedeclare and initialise the variables needed
+#Declare and initialise the variables needed
 total_months = 0
 total_revenue = 0
-revenue = []
 previous_revenue = 0
 month_of_change = []
 revenue_change = 0
-greatest_decrease = ["", 9999999]
-greatest_increase = ["", 0]
-revenue_change_list = []
 revenue_average = 0
-
 flag = True
-
 months = []
 
 #open and read the csv file and also reading it as a dictionary
@@ -54,7 +48,7 @@ with open(budget_data_csv) as csv_file:
     month_of_change.pop(0)
     months.pop(0)
     revenue_average = sum(month_of_change) / len(month_of_change)
-      
+  #Print the values to terminal    
     print(f'Total Months: {total_months} \n')
     print(f'Total Revenue: ${total_revenue} \n')
     print(f'Average Revenue Change ${revenue_average:.2f}\n')
